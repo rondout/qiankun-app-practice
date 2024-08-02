@@ -17,6 +17,7 @@
     "color2k": "^2.0.3",
     "pinia": "^2.1.7",
     "qiankun": "^2.10.16",
+    "vite-plugin-qiankun": "^1.0.15",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },

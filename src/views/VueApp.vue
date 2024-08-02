@@ -1,5 +1,7 @@
 <template>
-This is a Vue App
+    <div id="vue-app">
+        This is a Vue App
+    </div>
 </template> 
 
 <script setup lang="ts">
