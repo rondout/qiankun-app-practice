@@ -2,8 +2,8 @@
  * @Author: shufei.han
  * @Date: 2024-08-01 09:38:34
  * @LastEditors: shufei.han
- * @LastEditTime: 2024-08-01 09:52:57
- * @FilePath: /qiankun/main-app-vue/src/main.ts
+ * @LastEditTime: 2024-08-02 11:13:12
+ * @FilePath: \qiankun-app-practice\src\main.ts
  * @Description: 
  */
 import './assets/main.css'

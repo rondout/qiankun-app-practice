@@ -2,8 +2,8 @@
  * @Author: shufei.han
  * @Date: 2024-08-01 09:43:56
  * @LastEditors: shufei.han
- * @LastEditTime: 2024-08-01 14:56:28
- * @FilePath: \main-app-vue\src\views\layout\MainLayout.vue
+ * @LastEditTime: 2024-08-02 14:23:46
+ * @FilePath: \qiankun-app-practice\src\views\layout\MainLayout.vue
  * @Description: 
 -->
 
@@ -17,7 +17,7 @@
             <a-layout-sider :style="styles.siderStyle">
                 <LayoutMenu :theme="themeMode"></LayoutMenu>
             </a-layout-sider>
-            <a-layout-content>
+            <a-layout-content :id="MICRO_CONTAINER">
                 <router-view></router-view>
             </a-layout-content>
         </a-layout>
@@ -33,6 +33,9 @@ import ThemeChanger from '@/components/themeChanger.vue';
 import LayoutMenu from '@/views/layout/LayoutMenu.vue';
 import type { MenuTheme } from 'ant-design-vue';
 import { ref } from 'vue';
+import { MICRO_CONTAINER, initMicroApp } from '@/micro';
+import { onMounted } from 'vue';
+
 
 const { theme } = useTheme()
 
@@ -65,6 +68,9 @@ const styles = computed<AnyObject<CSSProperties>>(() => {
     }
 });
 
+onMounted(() => {
+    initMicroApp()
+})
 </script>
 
 <style lang="scss" scoped>
