@@ -6,7 +6,6 @@
     "src/**/*.vue",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "node_modules/ant-design-vue/typings/global.d.ts"
   ],
   "exclude": [
     "src/**/__tests__/*"
