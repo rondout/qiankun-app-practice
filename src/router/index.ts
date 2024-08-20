@@ -2,8 +2,8 @@
  * @Author: shufei.han
  * @Date: 2024-08-01 09:38:34
  * @LastEditors: shufei.han
- * @LastEditTime: 2024-08-01 15:18:45
- * @FilePath: \main-app-vue\src\router\index.ts
+ * @LastEditTime: 2024-08-20 10:55:00
+ * @FilePath: \qiankun\qiankun-app-practice\src\router\index.ts
  * @Description:
  */
 import { createRouter, createWebHistory } from "vue-router";
@@ -15,8 +15,14 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: () => import("@/views/layout/MainLayout.vue"),
-      redirect: "/vue",
+      redirect: "/main",
       children: [
+        {
+          path: "/main",
+          name: "main",
+          component: () => import("@/views/MainPage.vue"),
+        },
+
         {
           path: "/vue",
           name: "vue",
@@ -32,6 +38,11 @@ const router = createRouter({
           name: "native",
           component: () => import("@/views/NativeApp.vue"),
         },
+        {
+          path: '/:pathMatch(.*)*',
+          name: 'notFound',
+          component: () => import("@/views/layout/NotFound.vue"),
+        }
       ],
     },
     // {

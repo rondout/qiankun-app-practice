@@ -13,6 +13,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@micro-zoe/micro-app": "1.0.0-rc.6",
     "ant-design-vue": "^4.2.3",
     "color2k": "^2.0.3",
     "pinia": "^2.1.7",

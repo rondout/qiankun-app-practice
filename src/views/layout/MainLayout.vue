@@ -2,8 +2,8 @@
  * @Author: shufei.han
  * @Date: 2024-08-01 09:43:56
  * @LastEditors: shufei.han
- * @LastEditTime: 2024-08-01 14:56:28
- * @FilePath: \main-app-vue\src\views\layout\MainLayout.vue
+ * @LastEditTime: 2024-08-20 11:00:06
+ * @FilePath: \qiankun\qiankun-app-practice\src\views\layout\MainLayout.vue
  * @Description: 
 -->
 
@@ -17,8 +17,10 @@
             <a-layout-sider :style="styles.siderStyle">
                 <LayoutMenu :theme="themeMode"></LayoutMenu>
             </a-layout-sider>
-            <a-layout-content>
-                <router-view></router-view>
+            <a-layout-content class="router-container">
+                <div class="content-container full-height">
+                    <router-view></router-view>
+                </div>
             </a-layout-content>
         </a-layout>
     </a-layout>
@@ -70,5 +72,13 @@ const styles = computed<AnyObject<CSSProperties>>(() => {
 <style lang="scss" scoped>
 .main-layout {
     height: 100%;
+    .router-container {
+        height: 100%;
+        padding: 16px;
+        .content-container {
+            background-color: #fff;
+            overflow: auto;    
+        }
+    }
 }
 </style>

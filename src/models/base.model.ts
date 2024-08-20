@@ -2,8 +2,8 @@
  * @Author: shufei.han
  * @Date: 2024-08-01 11:05:53
  * @LastEditors: shufei.han
- * @LastEditTime: 2024-08-01 15:06:44
- * @FilePath: \main-app-vue\src\models\base.model.ts
+ * @LastEditTime: 2024-08-20 17:43:48
+ * @FilePath: \qiankun\qiankun-app-practice\src\models\base.model.ts
  * @Description:
  */
 export interface AnyObject<T = any> {
@@ -19,6 +19,7 @@ export enum SubApps {
 export interface SubAppConfig {
   name: string;
   label: string;
+  description: string;
   entry: string;
   routerPath: string;
 }
@@ -29,6 +30,7 @@ export const SubAppsConfigMap = new Map<SubApps, SubAppConfig>([
     {
       name: "vue",
       label: "VUE APP",
+      description: 'Vue3 + Vite App',
       entry: "//localhost:3000",
       routerPath: "/vue",
     },
@@ -38,6 +40,7 @@ export const SubAppsConfigMap = new Map<SubApps, SubAppConfig>([
     {
       name: "react",
       label: "REACT APP",
+      description: 'React + Vite App',
       entry: "//localhost:3001",
       routerPath: "/react",
     },
@@ -47,6 +50,7 @@ export const SubAppsConfigMap = new Map<SubApps, SubAppConfig>([
     {
       name: "native",
       label: "NATIVE APP",
+      description: 'Native + Express App',
       entry: "//localhost:3002",
       routerPath: "/native",
     },

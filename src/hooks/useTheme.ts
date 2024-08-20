@@ -2,8 +2,8 @@
  * @Author: shufei.han
  * @Date: 2024-08-01 09:58:58
  * @LastEditors: shufei.han
- * @LastEditTime: 2024-08-01 11:02:29
- * @FilePath: /main-app-vue/src/hooks/useTheme.ts
+ * @LastEditTime: 2024-08-20 17:47:21
+ * @FilePath: \qiankun\qiankun-app-practice\src\hooks\useTheme.ts
  * @Description: 
  */
 import { THEME_COLOR_KEY } from "@/models/theme.model";
@@ -42,8 +42,6 @@ export default function useTheme() {
     })
 
     watch(theme, () => {
-        console.log('in');
-        
         setColorToDocument()
     })
 

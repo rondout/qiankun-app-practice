@@ -2,8 +2,8 @@
  * @Author: shufei.han
  * @Date: 2024-08-01 14:17:58
  * @LastEditors: shufei.han
- * @LastEditTime: 2024-08-01 15:14:44
- * @FilePath: \main-app-vue\src\views\layout\LayoutMenu.vue
+ * @LastEditTime: 2024-08-20 17:46:00
+ * @FilePath: \qiankun\qiankun-app-practice\src\views\layout\LayoutMenu.vue
  * @Description: 
 -->
 <template>
@@ -25,11 +25,14 @@ const router = useRouter()
 const route = useRoute()
 
 const activeKeys = ref([])
-const menus: ItemType[] = SubAppList.map(app => ({ key: app.config.routerPath, label: app.config.label, ...app.config}))
+const baseMenus = [
+    { key: '/main',routerPath: '/main', label: '首页' },
+]
+const microMenus: ItemType[] = SubAppList.map(app => ({ key: app.config.routerPath, label: app.config.label, ...app.config}))
+
+const menus = [...baseMenus, ...microMenus]
 
 watch(() => route.path, () => {
-    console.log('watch');
-    
     const matchedRoute = menus.find(item => item.key === route.path)
     if(matchedRoute) {
         activeKeys.value = [matchedRoute.key]
